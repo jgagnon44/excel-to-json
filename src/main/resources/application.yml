@@ -1,0 +1,11 @@
+---
+excelToJSON:
+  dateFormat: MM/dd/yyyy
+  
+  prettyPrint: true
+  omitEmpty: false
+  fillColumns: false
+  
+  numSheets: 0
+  rowLimit: 0
+  rowOffset: 0

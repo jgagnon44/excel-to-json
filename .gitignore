@@ -1,0 +1,9 @@
+.project
+.settings
+.classpath
+
+target/
+
+**/*.json
+**/*.xlsx
+**/*.txt
