@@ -1,6 +1,6 @@
-package com.fossfloors.util;
+package com.fossfloors.exceljson;
 
-import com.fossfloors.util.converter.ExcelToJsonConverter;
+import com.fossfloors.exceljson.converter.ExcelToJsonConverter;
 
 public class TestApplication {
 

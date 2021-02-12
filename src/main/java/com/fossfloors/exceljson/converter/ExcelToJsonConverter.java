@@ -1,8 +1,7 @@
-package com.fossfloors.util.converter;
+package com.fossfloors.exceljson.converter;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,8 +17,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.springframework.beans.factory.annotation.Value;
 
-import com.fossfloors.util.pojo.ExcelWorkbook;
-import com.fossfloors.util.pojo.ExcelWorksheet;
+import com.fossfloors.exceljson.pojo.ExcelWorkbook;
+import com.fossfloors.exceljson.pojo.ExcelWorksheet;
 
 public class ExcelToJsonConverter {
 
@@ -49,10 +48,7 @@ public class ExcelToJsonConverter {
 
   public ExcelWorkbook convert(String sourceFile) throws InvalidFormatException, IOException {
     ExcelWorkbook book = new ExcelWorkbook();
-
-    InputStream input = new FileInputStream(sourceFile);
-    Workbook wb = WorkbookFactory.create(input);
-
+    Workbook wb = WorkbookFactory.create(new FileInputStream(sourceFile));
     int loopLimit = wb.getNumberOfSheets();
 
     if (numSheets > 0 && loopLimit > numSheets) {
